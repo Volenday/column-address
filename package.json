@@ -1,13 +1,12 @@
 {
 	"name": "@volenday/column-address",
-	"version": "0.0.4",
+	"version": "0.0.5",
 	"private": false,
 	"license": "MIT",
 	"author": "Jerome Miranda <jerome.m.miranda@gmail.com>",
 	"scripts": {
 		"dev": "webpack --watch --progress",
 		"build": "webpack --progress -p",
-		"prepublishOnly": "webpack --progress -p",
 		"postinstall": "webpack --progress -p"
 	},
 	"main": "dist/index.min.js",
