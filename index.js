@@ -8,6 +8,8 @@ export default props => {
 		filterable: false,
 		style: { ...style, display: 'flex', alignItems: 'center', justifyContent: 'center' },
 		Cell: ({ value }) => {
+			if (typeof value == 'undefined') return null;
+
 			if (value != '' && value != 'undefined' && typeof value != 'undefined') {
 				value = JSON.parse(value);
 				return (
