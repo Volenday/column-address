@@ -1,8 +1,6 @@
 import React from 'react';
 
-export default props => {
-	const { id, style = {}, ...defaultProps } = props;
-
+export default ({ id, style = {}, ...defaultProps }) => {
 	return {
 		...defaultProps,
 		filterable: false,

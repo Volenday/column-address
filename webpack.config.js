@@ -53,7 +53,7 @@ module.exports = {
 		libraryTarget: 'commonjs2'
 	},
 	externals: {
-		react: 'commonjs react'
+		react: 'react'
 	},
 	plugins: [
 		new webpack.optimize.AggressiveMergingPlugin(),
