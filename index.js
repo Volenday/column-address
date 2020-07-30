@@ -1,14 +1,13 @@
 import React from 'react';
 
-export default ({ id, style = {}, ...defaultProps }) => {
+export default ({ id, ...defaultProps }) => {
 	return {
 		...defaultProps,
-		filterable: false,
-		style: { ...style, display: 'flex', alignItems: 'center', justifyContent: 'center' },
+		disableFilters: true,
 		Cell: ({ value }) => {
-			if (typeof value == 'undefined') return null;
+			if (typeof value === 'undefined') return null;
 
-			if (value != '' && value != 'undefined' && typeof value != 'undefined') {
+			if (value !== '' && value !== 'undefined' && typeof value !== 'undefined') {
 				value = JSON.parse(value);
 				return (
 					<a href={value.url} target="_blank">
