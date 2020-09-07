@@ -8,12 +8,14 @@ export default ({ id, ...defaultProps }) => {
 			if (typeof value === 'undefined') return null;
 
 			if (value !== '' && value !== 'undefined' && typeof value !== 'undefined') {
-				value = JSON.parse(value);
-				return (
-					<a href={value.url} target="_blank">
-						{value.address}
-					</a>
-				);
+				try {
+					value = JSON.parse(value);
+					return (
+						<a href={value.url} target="_blank">
+							{value.address}
+						</a>
+					);
+				} catch (error) {}
 			}
 			return null;
 		}
