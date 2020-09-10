@@ -54,6 +54,7 @@ module.exports = {
 		libraryTarget: 'commonjs2'
 	},
 	externals: {
+		antd: 'antd',
 		react: 'react'
 	},
 	plugins: [
