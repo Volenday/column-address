@@ -9,8 +9,7 @@ export default ({ id, ...defaultProps }) => {
 			<Suspense fallback={<Skeleton active={true} paragraph={null} />}>
 				<Cell {...props} />
 			</Suspense>
-		),
-		Cell: ({ value }) => {}
+		)
 	};
 };
 
