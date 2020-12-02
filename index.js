@@ -1,15 +1,18 @@
 import React, { memo, Suspense } from 'react';
 import { Skeleton } from 'antd';
 
+const browser = typeof process.browser !== 'undefined' ? process.browser : true;
+
 export default ({ id, ...defaultProps }) => {
 	return {
 		...defaultProps,
 		disableFilters: true,
-		Cell: props => (
-			<Suspense fallback={<Skeleton active={true} paragraph={null} />}>
-				<Cell {...props} />
-			</Suspense>
-		)
+		Cell: props =>
+			browser ? (
+				<Suspense fallback={<Skeleton active={true} paragraph={null} />}>
+					<Cell {...props} />
+				</Suspense>
+			) : null
 	};
 };
 
